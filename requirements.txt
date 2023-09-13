@@ -1,0 +1,6 @@
+# run with `pip install -r requirements.txt`
+numpy
+matplotlib
+scipy
+# ensure that carla package version matches installed carla release version
+carla==0.9.14

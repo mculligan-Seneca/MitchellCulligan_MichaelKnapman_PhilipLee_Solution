@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RTMapsDiagram version="4.8.0" EngineVersion="4.10" xmlns="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles http://www.intempora.com/schemas/RTMaps/2011/RTMapsDiagram.xsd">
+  <RequiredPackages>
+    <File Version="1.0.0"><![CDATA[/opt/rtmaps/packages/MasterScheduler/MasterScheduler_Linux64.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/MasterScheduler/MasterScheduler_Linux64.pck]]></Relative></File>
+    <File Version="4.3.6"><![CDATA[/opt/rtmaps/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]></Relative></File>
+    <File Version="1.0.0"><![CDATA[/opt/rtmaps/packages/SimulinkPlantModel/SimulinkPlantModel_Linux64.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/SimulinkPlantModel/SimulinkPlantModel_Linux64.pck]]></Relative></File>
+  </RequiredPackages>
+  <RequiredMacroPackages>
+    <File><![CDATA[/home/sam/Desktop/EcoCAR/CAVs/SoftwareDevelopment/cav-sil-environment/cav-autera-software/cav_autera_software.rtmc]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../cav-sil-environment/cav-autera-software/cav_autera_software.rtmc]]></Relative></File>
+  </RequiredMacroPackages>
+  <EngineProperties>
+    <Property LongName="Engine.startTimespeed" Type="1">1000</Property>
+    <Property LongName="Engine.startTime" Type="1">0</Property>
+    <Property LongName="Engine.session" Type="3"><![CDATA[unspecified]]></Property>
+    <Property LongName="Engine.recordingAtStart" Type="0">true</Property>
+    <Property LongName="Engine.recording" Type="0">true</Property>
+    <Property LongName="Engine.sequentialStart" Type="0">false</Property>
+    <Property LongName="Engine.shutdownTimeout" Type="1">10000000</Property>
+    <Property LongName="Engine.autoDetectStartTime" Type="0">true</Property>
+    <Property LongName="Engine.coreFunctionsToSaveInDiag" Type="4"><![CDATA[0|-1]]></Property>
+    <Property LongName="Engine.useUTCTimeReference" Type="0">false</Property>
+    <Property LongName="Engine.fastForwardThreshold" Type="1">2000</Property>
+    <Property LongName="Engine.fastRewindThreshold" Type="1">-2000</Property>
+    <Property LongName="Engine.priorityClass" Type="4"><![CDATA[3|0|Shared Time|Preemptive|Auto]]></Property>
+    <Property LongName="Engine.posixTimerThread" Type="4"><![CDATA[3|0|Auto|Timer Interval|Real Time Clock]]></Property>
+    <Property LongName="Engine.posixRealTimeClockIrqFrequency" Type="4"><![CDATA[4|0|1024|2048|4096|8192]]></Property>
+    <Property LongName="Engine.posixPreemptiveSchedulingPolicy" Type="4"><![CDATA[2|0|FIFO|Round Robin]]></Property>
+    <Property LongName="Engine.windowsUsePerformanceCounter" Type="0">true</Property>
+  </EngineProperties>
+  <ClocksManagement>
+    <Property LongName="ClocksManagement.activeClock" Type="4"><![CDATA[1|0|RTMaps_standard_clock]]></Property>
+  </ClocksManagement>
+  <MacroComponent InstanceName="CavAuteraSoftware" Model="cav_autera_software" x="992" y="264" z="0">
+    <PropertyOverload LongName="ACC_SET_SPEED_MPS" Type="1">20</PropertyOverload>
+    <PropertyOverload LongName="PERCEPTION_PYTHON_EXECUTABLE_PATH" Type="3" SubType="16"><![CDATA[/home/sam/miniconda3/envs/carla/bin/python]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../../../miniconda3/envs/carla/bin/python]]></Relative></PropertyOverload>
+    <PropertyOverload LongName="PLANNING_PYTHON_EXECUTABLE_PATH" Type="3" SubType="16"><![CDATA[/home/sam/miniconda3/envs/carla/bin/python]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../../../miniconda3/envs/carla/bin/python]]></Relative></PropertyOverload>
+    <PropertyOverload LongName="CONTROLS_PYTHON_EXECUTABLE_PATH" Type="3" SubType="16"><![CDATA[/home/sam/miniconda3/envs/carla/bin/python]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../../../miniconda3/envs/carla/bin/python]]></Relative></PropertyOverload>
+    <PropertyOverload LongName="autoStart" Type="0">true</PropertyOverload>
+    <InputPropertyOverload LongName="TRIGGER_ms.readerType" Type="1">0</InputPropertyOverload>
+    <InputPropertyOverload LongName="TRIGGER_ms.subsampling" Type="1">1</InputPropertyOverload>
+    <InputPropertyOverload LongName="lidarData.readerType" Type="1">4</InputPropertyOverload>
+    <InputPropertyOverload LongName="lidarData.subsampling" Type="1">1</InputPropertyOverload>
+    <InputPropertyOverload LongName="radarData.readerType" Type="1">4</InputPropertyOverload>
+    <InputPropertyOverload LongName="radarData.subsampling" Type="1">1</InputPropertyOverload>
+    <InputPropertyOverload LongName="egoVehXVel_mps.readerType" Type="1">0</InputPropertyOverload>
+    <InputPropertyOverload LongName="egoVehXVel_mps.subsampling" Type="1">1</InputPropertyOverload>
+    <InputPropertyOverload LongName="leadVehRelXVel_mps.readerType" Type="1">0</InputPropertyOverload>
+    <InputPropertyOverload LongName="leadVehRelXVel_mps.subsampling" Type="1">1</InputPropertyOverload>
+    <InputPropertyOverload LongName="leadVehRelXPos_m.readerType" Type="1">0</InputPropertyOverload>
+    <InputPropertyOverload LongName="leadVehRelXPos_m.subsampling" Type="1">1</InputPropertyOverload>
+    <OutputPropertyOverload LongName="READY_ms.subsampling" Type="1">1</OutputPropertyOverload>
+    <OutputPropertyOverload LongName="READY_ms.fifosize" Type="1">16</OutputPropertyOverload>
+    <OutputPropertyOverload LongName="READY_ms.periodic" Type="0">false</OutputPropertyOverload>
+    <OutputPropertyOverload LongName="accelPdl_pct.subsampling" Type="1">1</OutputPropertyOverload>
+    <OutputPropertyOverload LongName="accelPdl_pct.fifosize" Type="1">16</OutputPropertyOverload>
+    <OutputPropertyOverload LongName="accelPdl_pct.periodic" Type="0">false</OutputPropertyOverload>
+    <OutputPropertyOverload LongName="decelPdl_pct.subsampling" Type="1">1</OutputPropertyOverload>
+    <OutputPropertyOverload LongName="decelPdl_pct.fifosize" Type="1">16</OutputPropertyOverload>
+    <OutputPropertyOverload LongName="decelPdl_pct.periodic" Type="0">false</OutputPropertyOverload>
+    <OutputPropertyOverload LongName="steeringCmd_deg.subsampling" Type="1">1</OutputPropertyOverload>
+    <OutputPropertyOverload LongName="steeringCmd_deg.fifosize" Type="1">16</OutputPropertyOverload>
+    <OutputPropertyOverload LongName="steeringCmd_deg.periodic" Type="0">false</OutputPropertyOverload>
+  </MacroComponent>
+  <Component InstanceName="CavCarlaEnvironment" Model="PythonBridge" Version="4.3.6" x="656" y="312" z="0">
+    <Input LongName="CavCarlaEnvironment.TRIGGER_ms" Name="TRIGGER_ms">
+      <Property LongName="CavCarlaEnvironment.TRIGGER_ms.readerType" Type="1">0</Property>
+      <Property LongName="CavCarlaEnvironment.TRIGGER_ms.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CavCarlaEnvironment.xPos_m" Name="xPos_m">
+      <Property LongName="CavCarlaEnvironment.xPos_m.readerType" Type="1">4</Property>
+      <Property LongName="CavCarlaEnvironment.xPos_m.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CavCarlaEnvironment.yPos_m" Name="yPos_m">
+      <Property LongName="CavCarlaEnvironment.yPos_m.readerType" Type="1">4</Property>
+      <Property LongName="CavCarlaEnvironment.yPos_m.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CavCarlaEnvironment.yaw_deg" Name="yaw_deg">
+      <Property LongName="CavCarlaEnvironment.yaw_deg.readerType" Type="1">4</Property>
+      <Property LongName="CavCarlaEnvironment.yaw_deg.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="CavCarlaEnvironment.READY_ms" Name="READY_ms">
+      <Property LongName="CavCarlaEnvironment.READY_ms.subsampling" Type="1">1</Property>
+      <Property LongName="CavCarlaEnvironment.READY_ms.fifosize" Type="1">16</Property>
+      <Property LongName="CavCarlaEnvironment.READY_ms.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="CavCarlaEnvironment.lidarData" Name="lidarData">
+      <Property LongName="CavCarlaEnvironment.lidarData.subsampling" Type="1">1</Property>
+      <Property LongName="CavCarlaEnvironment.lidarData.fifosize" Type="1">16</Property>
+      <Property LongName="CavCarlaEnvironment.lidarData.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="CavCarlaEnvironment.radarData" Name="radarData">
+      <Property LongName="CavCarlaEnvironment.radarData.subsampling" Type="1">1</Property>
+      <Property LongName="CavCarlaEnvironment.radarData.fifosize" Type="1">16</Property>
+      <Property LongName="CavCarlaEnvironment.radarData.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="CavCarlaEnvironment.leadVehSpeed_ms" Name="leadVehSpeed_ms">
+      <Property LongName="CavCarlaEnvironment.leadVehSpeed_ms.subsampling" Type="1">1</Property>
+      <Property LongName="CavCarlaEnvironment.leadVehSpeed_ms.fifosize" Type="1">16</Property>
+      <Property LongName="CavCarlaEnvironment.leadVehSpeed_ms.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="CavCarlaEnvironment.leadVehRelXPos_m" Name="leadVehRelXPos_m">
+      <Property LongName="CavCarlaEnvironment.leadVehRelXPos_m.subsampling" Type="1">1</Property>
+      <Property LongName="CavCarlaEnvironment.leadVehRelXPos_m.fifosize" Type="1">16</Property>
+      <Property LongName="CavCarlaEnvironment.leadVehRelXPos_m.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="CavCarlaEnvironment.guard_begin" Type="0" SubType="128">true</Property>
+    <Property LongName="CavCarlaEnvironment.internalInputs" Type="3" SubType="128"><![CDATA[TRIGGER_ms;1==#xPos_m;1==#yPos_m;1==#yaw_deg;1==]]></Property>
+    <Property LongName="CavCarlaEnvironment.internalOutputs" Type="3" SubType="128"><![CDATA[READY_ms;0==;0#lidarData;10==;0#radarData;10==;0#leadVehSpeed_ms;10==;0#leadVehRelXPos_m;10==;0]]></Property>
+    <Property LongName="CavCarlaEnvironment.internalProperties" Type="3" SubType="128"><![CDATA[]]></Property>
+    <ReadOnlyProperty LongName="CavCarlaEnvironment.advance_begin_configuration" Type="3" SubType="256"><![CDATA[Advanced Configuration]]></ReadOnlyProperty>
+    <Property LongName="CavCarlaEnvironment.deathBehavior" Type="4"><![CDATA[3|2|WAIT FOR PROCESS INDEFINITELY|KILL PROCESS AFTER TIMEOUT (5sec)|START ANOTHER PROCESS]]></Property>
+    <Property LongName="CavCarlaEnvironment.capturePythonPrint" Type="0">true</Property>
+    <Property LongName="CavCarlaEnvironment.useTCPOnly" Type="0">false</Property>
+    <ReadOnlyProperty LongName="CavCarlaEnvironment.pythonPID" Type="1">56677</ReadOnlyProperty>
+    <Property LongName="CavCarlaEnvironment.FileSHMSize" Type="1">15000000</Property>
+    <Property LongName="CavCarlaEnvironment.useNuitka" Type="0">false</Property>
+    <ReadOnlyProperty LongName="CavCarlaEnvironment.advance_end_configuration" Type="0" SubType="512">false</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="CavCarlaEnvironment.basic_begin_configuration" Type="3" SubType="256"><![CDATA[Basic Configuration]]></ReadOnlyProperty>
+    <Property LongName="CavCarlaEnvironment.className" Type="3"><![CDATA[rtmaps_python]]></Property>
+    <Property LongName="CavCarlaEnvironment.pythonExecutable" Type="3" SubType="16"><![CDATA[/home/sam/miniconda3/envs/carla/bin/python]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../../../miniconda3/envs/carla/bin/python]]></Relative></Property>
+    <Property LongName="CavCarlaEnvironment.pythonFilename" Type="3" SubType="80"><![CDATA[/home/sam/Desktop/EcoCAR/CAVs/SoftwareDevelopment/CavDevChallenge2023/cav-carla-env/CavCarlaRtmapsComp.py]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/cav-carla-env/CavCarlaRtmapsComp.py]]></Relative></Property>
+    <Property LongName="CavCarlaEnvironment.readingPolicy" Type="4"><![CDATA[5|3|Synchro|Reactive|Sampling|Triggered by First Input|Periodic Resampling Based on Timestamps]]></Property>
+    <Property LongName="CavCarlaEnvironment.inputsBehavior" Type="4"><![CDATA[2|0|AllowEmptyInputs|Wait4AllInputs]]></Property>
+    <ReadOnlyProperty LongName="CavCarlaEnvironment.basic_end_configuration" Type="0" SubType="512">true</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="CavCarlaEnvironment.userSubsection" Type="3" SubType="256"><![CDATA[User Properties]]></ReadOnlyProperty>
+    <Property LongName="CavCarlaEnvironment.guard_end" Type="0" SubType="128">true</Property>
+    <ReadOnlyProperty LongName="CavCarlaEnvironment.userSubsectionEnd" Type="0" SubType="512">true</ReadOnlyProperty>
+    <Property LongName="CavCarlaEnvironment.threaded" Type="0">true</Property>
+    <Property LongName="CavCarlaEnvironment.priority" Type="1">128</Property>
+    <Property LongName="CavCarlaEnvironment.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="CavMasterScheduler" Model="MasterScheduler" Version="1.0.1" x="656" y="112" z="0">
+    <Input LongName="CavMasterScheduler.plantModel_READY" Name="plantModel_READY">
+      <Property LongName="CavMasterScheduler.plantModel_READY.readerType" Type="1">0</Property>
+      <Property LongName="CavMasterScheduler.plantModel_READY.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CavMasterScheduler.auteraSoftware_READY" Name="auteraSoftware_READY">
+      <Property LongName="CavMasterScheduler.auteraSoftware_READY.readerType" Type="1">0</Property>
+      <Property LongName="CavMasterScheduler.auteraSoftware_READY.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CavMasterScheduler.env3d_READY" Name="env3d_READY">
+      <Property LongName="CavMasterScheduler.env3d_READY.readerType" Type="1">0</Property>
+      <Property LongName="CavMasterScheduler.env3d_READY.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="CavMasterScheduler.plantModel_TRIGGER" Name="plantModel_TRIGGER">
+      <Property LongName="CavMasterScheduler.plantModel_TRIGGER.subsampling" Type="1">1</Property>
+      <Property LongName="CavMasterScheduler.plantModel_TRIGGER.fifosize" Type="1">16</Property>
+      <Property LongName="CavMasterScheduler.plantModel_TRIGGER.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="CavMasterScheduler.auteraSoftware_TRIGGER" Name="auteraSoftware_TRIGGER">
+      <Property LongName="CavMasterScheduler.auteraSoftware_TRIGGER.subsampling" Type="1">1</Property>
+      <Property LongName="CavMasterScheduler.auteraSoftware_TRIGGER.fifosize" Type="1">16</Property>
+      <Property LongName="CavMasterScheduler.auteraSoftware_TRIGGER.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="CavMasterScheduler.env3d_TRIGGER" Name="env3d_TRIGGER">
+      <Property LongName="CavMasterScheduler.env3d_TRIGGER.subsampling" Type="1">1</Property>
+      <Property LongName="CavMasterScheduler.env3d_TRIGGER.fifosize" Type="1">16</Property>
+      <Property LongName="CavMasterScheduler.env3d_TRIGGER.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="CavMasterScheduler.timeRatio" Type="2">0</Property>
+    <Property LongName="CavMasterScheduler.showDebug" Type="0">false</Property>
+    <Property LongName="CavMasterScheduler.threaded" Type="0">true</Property>
+    <Property LongName="CavMasterScheduler.priority" Type="1">128</Property>
+    <Property LongName="CavMasterScheduler.autoStart" Type="0">true</Property>
+  </Component>
+  <Component InstanceName="CavVehiclePlantModel" Model="SimulinkPlantModel" Version="1.0.2" x="376" y="264" z="0">
+    <Input LongName="CavVehiclePlantModel.TRIGGER_ms" Name="TRIGGER_ms">
+      <Property LongName="CavVehiclePlantModel.TRIGGER_ms.readerType" Type="1">0</Property>
+      <Property LongName="CavVehiclePlantModel.TRIGGER_ms.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CavVehiclePlantModel.AccelCmd_pct" Name="AccelCmd_pct">
+      <Property LongName="CavVehiclePlantModel.AccelCmd_pct.readerType" Type="1">4</Property>
+      <Property LongName="CavVehiclePlantModel.AccelCmd_pct.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CavVehiclePlantModel.DecelCmd_pct" Name="DecelCmd_pct">
+      <Property LongName="CavVehiclePlantModel.DecelCmd_pct.readerType" Type="1">4</Property>
+      <Property LongName="CavVehiclePlantModel.DecelCmd_pct.subsampling" Type="1">1</Property>
+    </Input>
+    <Input LongName="CavVehiclePlantModel.SteeringCmd_deg" Name="SteeringCmd_deg">
+      <Property LongName="CavVehiclePlantModel.SteeringCmd_deg.readerType" Type="1">4</Property>
+      <Property LongName="CavVehiclePlantModel.SteeringCmd_deg.subsampling" Type="1">1</Property>
+    </Input>
+    <Output LongName="CavVehiclePlantModel.READY" Name="READY">
+      <Property LongName="CavVehiclePlantModel.READY.subsampling" Type="1">1</Property>
+      <Property LongName="CavVehiclePlantModel.READY.fifosize" Type="1">16</Property>
+      <Property LongName="CavVehiclePlantModel.READY.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="CavVehiclePlantModel.X_m" Name="X_m">
+      <Property LongName="CavVehiclePlantModel.X_m.subsampling" Type="1">1</Property>
+      <Property LongName="CavVehiclePlantModel.X_m.fifosize" Type="1">16</Property>
+      <Property LongName="CavVehiclePlantModel.X_m.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="CavVehiclePlantModel.Y_m" Name="Y_m">
+      <Property LongName="CavVehiclePlantModel.Y_m.subsampling" Type="1">1</Property>
+      <Property LongName="CavVehiclePlantModel.Y_m.fifosize" Type="1">16</Property>
+      <Property LongName="CavVehiclePlantModel.Y_m.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="CavVehiclePlantModel.Xdot_ms" Name="Xdot_ms">
+      <Property LongName="CavVehiclePlantModel.Xdot_ms.subsampling" Type="1">1</Property>
+      <Property LongName="CavVehiclePlantModel.Xdot_ms.fifosize" Type="1">16</Property>
+      <Property LongName="CavVehiclePlantModel.Xdot_ms.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="CavVehiclePlantModel.Ydot_ms" Name="Ydot_ms">
+      <Property LongName="CavVehiclePlantModel.Ydot_ms.subsampling" Type="1">1</Property>
+      <Property LongName="CavVehiclePlantModel.Ydot_ms.fifosize" Type="1">16</Property>
+      <Property LongName="CavVehiclePlantModel.Ydot_ms.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="CavVehiclePlantModel.Phi_deg" Name="Phi_deg">
+      <Property LongName="CavVehiclePlantModel.Phi_deg.subsampling" Type="1">1</Property>
+      <Property LongName="CavVehiclePlantModel.Phi_deg.fifosize" Type="1">16</Property>
+      <Property LongName="CavVehiclePlantModel.Phi_deg.periodic" Type="0">false</Property>
+    </Output>
+    <Output LongName="CavVehiclePlantModel.Psi_deg" Name="Psi_deg">
+      <Property LongName="CavVehiclePlantModel.Psi_deg.subsampling" Type="1">1</Property>
+      <Property LongName="CavVehiclePlantModel.Psi_deg.fifosize" Type="1">16</Property>
+      <Property LongName="CavVehiclePlantModel.Psi_deg.periodic" Type="0">false</Property>
+    </Output>
+    <Property LongName="CavVehiclePlantModel.threaded" Type="0">true</Property>
+    <Property LongName="CavVehiclePlantModel.priority" Type="1">128</Property>
+    <Property LongName="CavVehiclePlantModel.autoStart" Type="0">true</Property>
+  </Component>
+  <Connection Output="CavMasterScheduler.env3d_TRIGGER" Input="CavCarlaEnvironment.TRIGGER_ms"/>
+  <Connection Output="CavVehiclePlantModel.X_m" Input="CavCarlaEnvironment.xPos_m"/>
+  <Connection Output="CavVehiclePlantModel.Y_m" Input="CavCarlaEnvironment.yPos_m"/>
+  <Connection Output="CavVehiclePlantModel.Psi_deg" Input="CavCarlaEnvironment.yaw_deg"/>
+  <Connection Output="CavVehiclePlantModel.READY" Input="CavMasterScheduler.plantModel_READY"/>
+  <Connection Output="CavAuteraSoftware.READY_ms" Input="CavMasterScheduler.auteraSoftware_READY"/>
+  <Connection Output="CavCarlaEnvironment.READY_ms" Input="CavMasterScheduler.env3d_READY"/>
+  <Connection Output="CavMasterScheduler.plantModel_TRIGGER" Input="CavVehiclePlantModel.TRIGGER_ms"/>
+  <Connection Output="CavAuteraSoftware.accelPdl_pct" Input="CavVehiclePlantModel.AccelCmd_pct"/>
+  <Connection Output="CavAuteraSoftware.decelPdl_pct" Input="CavVehiclePlantModel.DecelCmd_pct"/>
+  <Connection Output="CavAuteraSoftware.steeringCmd_deg" Input="CavVehiclePlantModel.SteeringCmd_deg"/>
+  <Connection Output="CavMasterScheduler.auteraSoftware_TRIGGER" Input="CavAuteraSoftware.TRIGGER_ms"/>
+  <Connection Output="CavCarlaEnvironment.lidarData" Input="CavAuteraSoftware.lidarData"/>
+  <Connection Output="CavCarlaEnvironment.radarData" Input="CavAuteraSoftware.radarData"/>
+  <Connection Output="CavVehiclePlantModel.Xdot_ms" Input="CavAuteraSoftware.egoVehXVel_mps"/>
+  <Connection Output="CavCarlaEnvironment.leadVehSpeed_ms" Input="CavAuteraSoftware.leadVehRelXVel_mps"/>
+  <Connection Output="CavCarlaEnvironment.leadVehRelXPos_m" Input="CavAuteraSoftware.leadVehRelXPos_m"/>
+  <RTBoardView ID="JavaStudio1.0">
+    <ComponentBox InstanceName="CavCarlaEnvironment" reversed="false">
+      <Description/>
+    </ComponentBox>
+    <ConnectionShape InstanceName="CavAuteraSoftware.egoVehXVel_mps" color="0"/>
+    <ConnectionShape InstanceName="CavAuteraSoftware.leadVehRelXPos_m" color="0"/>
+    <ConnectionShape InstanceName="CavAuteraSoftware.leadVehRelXVel_mps" color="0"/>
+    <ConnectionShape InstanceName="CavAuteraSoftware.lidarData" color="0"/>
+    <ConnectionShape InstanceName="CavAuteraSoftware.radarData" color="0"/>
+    <ConnectionShape InstanceName="CavAuteraSoftware.TRIGGER_ms" color="0"/>
+    <ConnectionShape InstanceName="CavCarlaEnvironment.TRIGGER_ms" color="0"/>
+    <ConnectionShape InstanceName="CavCarlaEnvironment.xPos_m" color="0"/>
+    <ConnectionShape InstanceName="CavCarlaEnvironment.yaw_deg" color="0"/>
+    <ConnectionShape InstanceName="CavCarlaEnvironment.yPos_m" color="0"/>
+    <ConnectionShape InstanceName="CavMasterScheduler.auteraSoftware_READY" color="0"/>
+    <ConnectionShape InstanceName="CavMasterScheduler.env3d_READY" color="0"/>
+    <ConnectionShape InstanceName="CavMasterScheduler.plantModel_READY" color="0"/>
+    <ConnectionShape InstanceName="CavVehiclePlantModel.AccelCmd_pct" color="0"/>
+    <ConnectionShape InstanceName="CavVehiclePlantModel.DecelCmd_pct" color="0"/>
+    <ConnectionShape InstanceName="CavVehiclePlantModel.SteeringCmd_deg" color="0"/>
+    <ConnectionShape InstanceName="CavVehiclePlantModel.TRIGGER_ms" color="0"/>
+    <ConnectionShape InstanceName="KittiPointCloudViewer3D_1.pointsXYZ" color="0"/>
+    <ConnectionShape InstanceName="PythonBridge_1.TRIGGER_ms" color="0"/>
+    <ConnectionShape InstanceName="PythonBridge_1.xPos_m" color="0"/>
+    <ConnectionShape InstanceName="PythonBridge_1.yaw_deg" color="0"/>
+    <ConnectionShape InstanceName="PythonBridge_1.yPos_m" color="0"/>
+    <ConnectionShape InstanceName="SimulinkPlantModel_1.AccelCmd_pct" color="0"/>
+    <ConnectionShape InstanceName="SimulinkPlantModel_1.DecelCmd_pct" color="0"/>
+    <ConnectionShape InstanceName="SimulinkPlantModel_1.SteeringCmd_deg" color="0"/>
+    <ConnectionShape InstanceName="SimulinkPlantModel_1.TRIGGER_ms" color="0"/>
+  </RTBoardView>
+</RTMapsDiagram>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MacroPackage version="4.8.0" PackageVersion="" xmlns="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles http://www.intempora.com/schemas/RTMaps/2011/RTMapsDiagram.xsd http://schemas.intempora.com/RTMaps/2011/RTMapsFiles http://www.intempora.com/schemas/RTMaps/2011/RTMapsDiagram_RTBoardView.xsd">
+  <RequiredPackages>
+    <File><![CDATA[/opt/rtmaps/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]></Relative></File>
+  </RequiredPackages>
+  <RequiredMacroPackages/>
+  <MacroComponentModel Model="cav_autera_software" Version="">
+    <Component InstanceName="bypass_1" Model="bypass" Version="1.5.2" x="-32" y="288" z="0">
+      <Input Name="input_1" LongName="bypass_1.input_1">
+        <Property LongName="bypass_1.input_1.readerType" Type="1">0</Property>
+        <Property LongName="bypass_1.input_1.subsampling" Type="1">1</Property>
+      </Input>
+      <Output Name="output_1" LongName="bypass_1.output_1">
+        <Property LongName="bypass_1.output_1.fifosize" Type="1">16</Property>
+        <Property LongName="bypass_1.output_1.periodic" Type="0">false</Property>
+        <Property LongName="bypass_1.output_1.subsampling" Type="1">1</Property>
+      </Output>
+      <Property LongName="bypass_1.nb_channels" Type="1">1</Property>
+      <Property LongName="bypass_1.us_timestamp_offset_1" Type="1">0</Property>
+      <Property LongName="bypass_1.special_actions_1" Type="4"><![CDATA[4|0|None|Reset to zero after timeout|Hold max value until timeout|Hold min value until timeout]]></Property>
+      <Property LongName="bypass_1.threaded" Type="0">true</Property>
+      <Property LongName="bypass_1.priority" Type="1">128</Property>
+    </Component>
+    <Component InstanceName="bypass_1_1" Model="bypass" Version="1.5.2" x="-32" y="376" z="0">
+      <Input Name="input_1" LongName="bypass_1_1.input_1">
+        <Property LongName="bypass_1_1.input_1.readerType" Type="1">0</Property>
+        <Property LongName="bypass_1_1.input_1.subsampling" Type="1">1</Property>
+      </Input>
+      <Output Name="output_1" LongName="bypass_1_1.output_1">
+        <Property LongName="bypass_1_1.output_1.fifosize" Type="1">16</Property>
+        <Property LongName="bypass_1_1.output_1.periodic" Type="0">false</Property>
+        <Property LongName="bypass_1_1.output_1.subsampling" Type="1">1</Property>
+      </Output>
+      <Property LongName="bypass_1_1.nb_channels" Type="1">1</Property>
+      <Property LongName="bypass_1_1.us_timestamp_offset_1" Type="1">0</Property>
+      <Property LongName="bypass_1_1.special_actions_1" Type="4"><![CDATA[4|0|None|Reset to zero after timeout|Hold max value until timeout|Hold min value until timeout]]></Property>
+      <Property LongName="bypass_1_1.threaded" Type="0">true</Property>
+      <Property LongName="bypass_1_1.priority" Type="1">128</Property>
+    </Component>
+    <Component InstanceName="bypass_1_1_1" Model="bypass" Version="1.5.2" x="-32" y="472" z="0">
+      <Input Name="input_1" LongName="bypass_1_1_1.input_1">
+        <Property LongName="bypass_1_1_1.input_1.readerType" Type="1">0</Property>
+        <Property LongName="bypass_1_1_1.input_1.subsampling" Type="1">1</Property>
+      </Input>
+      <Output Name="output_1" LongName="bypass_1_1_1.output_1">
+        <Property LongName="bypass_1_1_1.output_1.fifosize" Type="1">16</Property>
+        <Property LongName="bypass_1_1_1.output_1.periodic" Type="0">false</Property>
+        <Property LongName="bypass_1_1_1.output_1.subsampling" Type="1">1</Property>
+      </Output>
+      <Property LongName="bypass_1_1_1.nb_channels" Type="1">1</Property>
+      <Property LongName="bypass_1_1_1.us_timestamp_offset_1" Type="1">0</Property>
+      <Property LongName="bypass_1_1_1.special_actions_1" Type="4"><![CDATA[4|0|None|Reset to zero after timeout|Hold max value until timeout|Hold min value until timeout]]></Property>
+      <Property LongName="bypass_1_1_1.threaded" Type="0">true</Property>
+      <Property LongName="bypass_1_1_1.priority" Type="1">128</Property>
+    </Component>
+    <Component InstanceName="Controls" Model="PythonBridge" Version="4.3.6" x="992" y="200" z="0">
+      <Input Name="TRIGGER_ms" LongName="Controls.TRIGGER_ms">
+        <Property LongName="Controls.TRIGGER_ms.readerType" Type="1">0</Property>
+        <Property LongName="Controls.TRIGGER_ms.subsampling" Type="1">1</Property>
+      </Input>
+      <Input Name="targetVel_mps" LongName="Controls.targetVel_mps">
+        <Property LongName="Controls.targetVel_mps.readerType" Type="1">4</Property>
+        <Property LongName="Controls.targetVel_mps.subsampling" Type="1">1</Property>
+      </Input>
+      <Input Name="egoVehXVel_mps" LongName="Controls.egoVehXVel_mps">
+        <Property LongName="Controls.egoVehXVel_mps.readerType" Type="1">4</Property>
+        <Property LongName="Controls.egoVehXVel_mps.subsampling" Type="1">1</Property>
+      </Input>
+      <Output Name="READY_ms" LongName="Controls.READY_ms">
+        <Property LongName="Controls.READY_ms.fifosize" Type="1">16</Property>
+        <Property LongName="Controls.READY_ms.periodic" Type="0">false</Property>
+        <Property LongName="Controls.READY_ms.subsampling" Type="1">1</Property>
+      </Output>
+      <Output Name="accelPdl_pct" LongName="Controls.accelPdl_pct">
+        <Property LongName="Controls.accelPdl_pct.fifosize" Type="1">16</Property>
+        <Property LongName="Controls.accelPdl_pct.periodic" Type="0">false</Property>
+        <Property LongName="Controls.accelPdl_pct.subsampling" Type="1">1</Property>
+      </Output>
+      <Output Name="decelPdl_pct" LongName="Controls.decelPdl_pct">
+        <Property LongName="Controls.decelPdl_pct.fifosize" Type="1">16</Property>
+        <Property LongName="Controls.decelPdl_pct.periodic" Type="0">false</Property>
+        <Property LongName="Controls.decelPdl_pct.subsampling" Type="1">1</Property>
+      </Output>
+      <Output Name="steeringCmd_deg" LongName="Controls.steeringCmd_deg">
+        <Property LongName="Controls.steeringCmd_deg.fifosize" Type="1">16</Property>
+        <Property LongName="Controls.steeringCmd_deg.periodic" Type="0">false</Property>
+        <Property LongName="Controls.steeringCmd_deg.subsampling" Type="1">1</Property>
+      </Output>
+      <Property LongName="Controls.guard_begin" Type="0" SubType="128">true</Property>
+      <Property LongName="Controls.internalInputs" Type="3" SubType="128"><![CDATA[TRIGGER_ms;8==#targetVel_mps;10==#egoVehXVel_mps;10==]]></Property>
+      <Property LongName="Controls.internalOutputs" Type="3" SubType="128"><![CDATA[READY_ms;8==;0#accelPdl_pct;10==;0#decelPdl_pct;10==;0#steeringCmd_deg;10==;0]]></Property>
+      <Property LongName="Controls.internalProperties" Type="3" SubType="128"><![CDATA[]]></Property>
+      <ReadOnlyProperty LongName="Controls.advance_begin_configuration" Type="3" SubType="256"><![CDATA[Advanced Configuration]]></ReadOnlyProperty>
+      <Property LongName="Controls.deathBehavior" Type="4"><![CDATA[3|1|WAIT FOR PROCESS INDEFINITELY|KILL PROCESS AFTER TIMEOUT (5sec)|START ANOTHER PROCESS]]></Property>
+      <Property LongName="Controls.capturePythonPrint" Type="0">true</Property>
+      <Property LongName="Controls.useTCPOnly" Type="0">false</Property>
+      <ReadOnlyProperty LongName="Controls.pythonPID" Type="1">33841</ReadOnlyProperty>
+      <Property LongName="Controls.FileSHMSize" Type="1">15000000</Property>
+      <Property LongName="Controls.useNuitka" Type="0">false</Property>
+      <ReadOnlyProperty LongName="Controls.advance_end_configuration" Type="0" SubType="512">false</ReadOnlyProperty>
+      <ReadOnlyProperty LongName="Controls.basic_begin_configuration" Type="3" SubType="256"><![CDATA[Basic Configuration]]></ReadOnlyProperty>
+      <Property LongName="Controls.className" Type="3"><![CDATA[rtmaps_python]]></Property>
+      <Property LongName="Controls.pythonExecutable" Type="3" SubType="16"><![CDATA[]]></Property>
+      <Property LongName="Controls.pythonFilename" Type="3" SubType="80"><![CDATA[/home/sam/Desktop/EcoCAR/CAVs/SoftwareDevelopment/cav-sil-environment/cav-autera-software/cav-controls/CavControlsRtmapsComp.py]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/cav-controls/CavControlsRtmapsComp.py]]></Relative></Property>
+      <Property LongName="Controls.readingPolicy" Type="4"><![CDATA[5|3|Synchro|Reactive|Sampling|Triggered by First Input|Periodic Resampling Based on Timestamps]]></Property>
+      <Property LongName="Controls.inputsBehavior" Type="4"><![CDATA[2|0|AllowEmptyInputs|Wait4AllInputs]]></Property>
+      <ReadOnlyProperty LongName="Controls.basic_end_configuration" Type="0" SubType="512">true</ReadOnlyProperty>
+      <ReadOnlyProperty LongName="Controls.userSubsection" Type="3" SubType="256"><![CDATA[User Properties]]></ReadOnlyProperty>
+      <Property LongName="Controls.guard_end" Type="0" SubType="128">true</Property>
+      <ReadOnlyProperty LongName="Controls.userSubsectionEnd" Type="0" SubType="512">true</ReadOnlyProperty>
+      <Property LongName="Controls.threaded" Type="0">true</Property>
+      <Property LongName="Controls.priority" Type="1">128</Property>
+    </Component>
+    <Component InstanceName="Perception" Model="PythonBridge" Version="4.3.6" x="232" y="200" z="0">
+      <Input Name="TRIGGER_ms" LongName="Perception.TRIGGER_ms">
+        <Property LongName="Perception.TRIGGER_ms.readerType" Type="1">0</Property>
+        <Property LongName="Perception.TRIGGER_ms.subsampling" Type="1">1</Property>
+      </Input>
+      <Input Name="lidarData" LongName="Perception.lidarData">
+        <Property LongName="Perception.lidarData.readerType" Type="1">4</Property>
+        <Property LongName="Perception.lidarData.subsampling" Type="1">1</Property>
+      </Input>
+      <Input Name="radarData" LongName="Perception.radarData">
+        <Property LongName="Perception.radarData.readerType" Type="1">4</Property>
+        <Property LongName="Perception.radarData.subsampling" Type="1">1</Property>
+      </Input>
+      <Input Name="egoVehXVel_mps" LongName="Perception.egoVehXVel_mps">
+        <Property LongName="Perception.egoVehXVel_mps.readerType" Type="1">4</Property>
+        <Property LongName="Perception.egoVehXVel_mps.subsampling" Type="1">1</Property>
+      </Input>
+      <Output Name="READY_ms" LongName="Perception.READY_ms">
+        <Property LongName="Perception.READY_ms.fifosize" Type="1">16</Property>
+        <Property LongName="Perception.READY_ms.periodic" Type="0">false</Property>
+        <Property LongName="Perception.READY_ms.subsampling" Type="1">1</Property>
+      </Output>
+      <Output Name="leadVehValidity" LongName="Perception.leadVehValidity">
+        <Property LongName="Perception.leadVehValidity.fifosize" Type="1">16</Property>
+        <Property LongName="Perception.leadVehValidity.periodic" Type="0">false</Property>
+        <Property LongName="Perception.leadVehValidity.subsampling" Type="1">1</Property>
+      </Output>
+      <Output Name="leadVehRelXPos_m" LongName="Perception.leadVehRelXPos_m">
+        <Property LongName="Perception.leadVehRelXPos_m.fifosize" Type="1">16</Property>
+        <Property LongName="Perception.leadVehRelXPos_m.periodic" Type="0">false</Property>
+        <Property LongName="Perception.leadVehRelXPos_m.subsampling" Type="1">1</Property>
+      </Output>
+      <Output Name="leadVehRelXVel_mps" LongName="Perception.leadVehRelXVel_mps">
+        <Property LongName="Perception.leadVehRelXVel_mps.fifosize" Type="1">16</Property>
+        <Property LongName="Perception.leadVehRelXVel_mps.periodic" Type="0">false</Property>
+        <Property LongName="Perception.leadVehRelXVel_mps.subsampling" Type="1">1</Property>
+      </Output>
+      <Property LongName="Perception.guard_begin" Type="0" SubType="128">true</Property>
+      <Property LongName="Perception.internalInputs" Type="3" SubType="128"><![CDATA[TRIGGER_ms;8==#lidarData;10==#radarData;10==#egoVehXVel_mps;10==]]></Property>
+      <Property LongName="Perception.internalOutputs" Type="3" SubType="128"><![CDATA[READY_ms;8==;0#leadVehValidity;0==;0#leadVehRelXPos_m;0==;0#leadVehRelXVel_mps;0==;0]]></Property>
+      <Property LongName="Perception.internalProperties" Type="3" SubType="128"><![CDATA[]]></Property>
+      <ReadOnlyProperty LongName="Perception.advance_begin_configuration" Type="3" SubType="256"><![CDATA[Advanced Configuration]]></ReadOnlyProperty>
+      <Property LongName="Perception.deathBehavior" Type="4"><![CDATA[3|1|WAIT FOR PROCESS INDEFINITELY|KILL PROCESS AFTER TIMEOUT (5sec)|START ANOTHER PROCESS]]></Property>
+      <Property LongName="Perception.capturePythonPrint" Type="0">true</Property>
+      <Property LongName="Perception.useTCPOnly" Type="0">false</Property>
+      <ReadOnlyProperty LongName="Perception.pythonPID" Type="1">33848</ReadOnlyProperty>
+      <Property LongName="Perception.FileSHMSize" Type="1">15000000</Property>
+      <Property LongName="Perception.useNuitka" Type="0">false</Property>
+      <ReadOnlyProperty LongName="Perception.advance_end_configuration" Type="0" SubType="512">false</ReadOnlyProperty>
+      <ReadOnlyProperty LongName="Perception.basic_begin_configuration" Type="3" SubType="256"><![CDATA[Basic Configuration]]></ReadOnlyProperty>
+      <Property LongName="Perception.className" Type="3"><![CDATA[rtmaps_python]]></Property>
+      <Property LongName="Perception.pythonExecutable" Type="3" SubType="16"><![CDATA[]]></Property>
+      <Property LongName="Perception.pythonFilename" Type="3" SubType="80"><![CDATA[/home/sam/Desktop/EcoCAR/CAVs/SoftwareDevelopment/cav-sil-environment/cav-autera-software/cav-perception/CavPerceptionRtmapsComp.py]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/cav-perception/CavPerceptionRtmapsComp.py]]></Relative></Property>
+      <Property LongName="Perception.readingPolicy" Type="4"><![CDATA[5|3|Synchro|Reactive|Sampling|Triggered by First Input|Periodic Resampling Based on Timestamps]]></Property>
+      <Property LongName="Perception.inputsBehavior" Type="4"><![CDATA[2|0|AllowEmptyInputs|Wait4AllInputs]]></Property>
+      <ReadOnlyProperty LongName="Perception.basic_end_configuration" Type="0" SubType="512">true</ReadOnlyProperty>
+      <ReadOnlyProperty LongName="Perception.userSubsection" Type="3" SubType="256"><![CDATA[User Properties]]></ReadOnlyProperty>
+      <Property LongName="Perception.guard_end" Type="0" SubType="128">true</Property>
+      <ReadOnlyProperty LongName="Perception.userSubsectionEnd" Type="0" SubType="512">true</ReadOnlyProperty>
+      <Property LongName="Perception.threaded" Type="0">true</Property>
+      <Property LongName="Perception.priority" Type="1">128</Property>
+    </Component>
+    <Component InstanceName="Planning" Model="PythonBridge" Version="4.3.6" x="688" y="200" z="0">
+      <Input Name="TRIGGER_ms" LongName="Planning.TRIGGER_ms">
+        <Property LongName="Planning.TRIGGER_ms.readerType" Type="1">0</Property>
+        <Property LongName="Planning.TRIGGER_ms.subsampling" Type="1">1</Property>
+      </Input>
+      <Input Name="leadObjectValidity" LongName="Planning.leadObjectValidity">
+        <Property LongName="Planning.leadObjectValidity.readerType" Type="1">4</Property>
+        <Property LongName="Planning.leadObjectValidity.subsampling" Type="1">1</Property>
+      </Input>
+      <Input Name="leadObjectRelXPos_m" LongName="Planning.leadObjectRelXPos_m">
+        <Property LongName="Planning.leadObjectRelXPos_m.readerType" Type="1">4</Property>
+        <Property LongName="Planning.leadObjectRelXPos_m.subsampling" Type="1">1</Property>
+      </Input>
+      <Input Name="leadObjectRelXVel_mps" LongName="Planning.leadObjectRelXVel_mps">
+        <Property LongName="Planning.leadObjectRelXVel_mps.readerType" Type="1">4</Property>
+        <Property LongName="Planning.leadObjectRelXVel_mps.subsampling" Type="1">1</Property>
+      </Input>
+      <Output Name="READY_ms" LongName="Planning.READY_ms">
+        <Property LongName="Planning.READY_ms.fifosize" Type="1">16</Property>
+        <Property LongName="Planning.READY_ms.periodic" Type="0">false</Property>
+        <Property LongName="Planning.READY_ms.subsampling" Type="1">1</Property>
+      </Output>
+      <Output Name="targetVel_mps" LongName="Planning.targetVel_mps">
+        <Property LongName="Planning.targetVel_mps.fifosize" Type="1">16</Property>
+        <Property LongName="Planning.targetVel_mps.periodic" Type="0">false</Property>
+        <Property LongName="Planning.targetVel_mps.subsampling" Type="1">1</Property>
+      </Output>
+      <Property LongName="Planning.guard_begin" Type="0" SubType="128">true</Property>
+      <Property LongName="Planning.internalInputs" Type="3" SubType="128"><![CDATA[TRIGGER_ms;8==#leadObjectValidity;3==#leadObjectRelXPos_m;10==#leadObjectRelXVel_mps;10==]]></Property>
+      <Property LongName="Planning.internalOutputs" Type="3" SubType="128"><![CDATA[READY_ms;8==;0#targetVel_mps;0==;0]]></Property>
+      <Property LongName="Planning.internalProperties" Type="3" SubType="128"><![CDATA[accSetSpeed_mps||8||20]]></Property>
+      <ReadOnlyProperty LongName="Planning.advance_begin_configuration" Type="3" SubType="256"><![CDATA[Advanced Configuration]]></ReadOnlyProperty>
+      <Property LongName="Planning.deathBehavior" Type="4"><![CDATA[3|1|WAIT FOR PROCESS INDEFINITELY|KILL PROCESS AFTER TIMEOUT (5sec)|START ANOTHER PROCESS]]></Property>
+      <Property LongName="Planning.capturePythonPrint" Type="0">true</Property>
+      <Property LongName="Planning.useTCPOnly" Type="0">false</Property>
+      <ReadOnlyProperty LongName="Planning.pythonPID" Type="1">33855</ReadOnlyProperty>
+      <Property LongName="Planning.FileSHMSize" Type="1">15000000</Property>
+      <Property LongName="Planning.useNuitka" Type="0">false</Property>
+      <ReadOnlyProperty LongName="Planning.advance_end_configuration" Type="0" SubType="512">false</ReadOnlyProperty>
+      <ReadOnlyProperty LongName="Planning.basic_begin_configuration" Type="3" SubType="256"><![CDATA[Basic Configuration]]></ReadOnlyProperty>
+      <Property LongName="Planning.className" Type="3"><![CDATA[rtmaps_python]]></Property>
+      <Property LongName="Planning.pythonExecutable" Type="3" SubType="16"><![CDATA[]]></Property>
+      <Property LongName="Planning.pythonFilename" Type="3" SubType="80"><![CDATA[/home/sam/Desktop/EcoCAR/CAVs/SoftwareDevelopment/cav-sil-environment/cav-autera-software/cav-planning/CavPlanningRtmapsComp.py]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/cav-planning/CavPlanningRtmapsComp.py]]></Relative></Property>
+      <Property LongName="Planning.readingPolicy" Type="4"><![CDATA[5|3|Synchro|Reactive|Sampling|Triggered by First Input|Periodic Resampling Based on Timestamps]]></Property>
+      <Property LongName="Planning.inputsBehavior" Type="4"><![CDATA[2|0|AllowEmptyInputs|Wait4AllInputs]]></Property>
+      <ReadOnlyProperty LongName="Planning.basic_end_configuration" Type="0" SubType="512">true</ReadOnlyProperty>
+      <ReadOnlyProperty LongName="Planning.userSubsection" Type="3" SubType="256"><![CDATA[User Properties]]></ReadOnlyProperty>
+      <Property LongName="Planning.accSetSpeed_mps" Type="1">20</Property>
+      <Property LongName="Planning.guard_end" Type="0" SubType="128">true</Property>
+      <ReadOnlyProperty LongName="Planning.userSubsectionEnd" Type="0" SubType="512">true</ReadOnlyProperty>
+      <Property LongName="Planning.threaded" Type="0">true</Property>
+      <Property LongName="Planning.priority" Type="1">128</Property>
+    </Component>
+    <Connection Output="bypass_1.output_1" Input="Controls.egoVehXVel_mps"/>
+    <Connection Output="Planning.targetVel_mps" Input="Controls.targetVel_mps"/>
+    <Connection Output="Planning.READY_ms" Input="Controls.TRIGGER_ms"/>
+    <Connection Output="bypass_1.output_1" Input="Perception.egoVehXVel_mps"/>
+    <Connection Output="Perception.leadVehRelXPos_m" Input="Planning.leadObjectRelXPos_m"/>
+    <Connection Output="Perception.leadVehRelXVel_mps" Input="Planning.leadObjectRelXVel_mps"/>
+    <Connection Output="Perception.leadVehValidity" Input="Planning.leadObjectValidity"/>
+    <Connection Output="Perception.READY_ms" Input="Planning.TRIGGER_ms"/>
+    <Input Name="TRIGGER_ms" Target="Perception.TRIGGER_ms"/>
+    <Input Name="lidarData" Target="Perception.lidarData"/>
+    <Input Name="radarData" Target="Perception.radarData"/>
+    <Input Name="egoVehXVel_mps" Target="bypass_1.input_1"/>
+    <Input Name="leadVehRelXVel_mps" Target="bypass_1_1.input_1"/>
+    <Input Name="leadVehRelXPos_m" Target="bypass_1_1_1.input_1"/>
+    <Output Name="READY_ms" Target="Controls.READY_ms"/>
+    <Output Name="accelPdl_pct" Target="Controls.accelPdl_pct"/>
+    <Output Name="decelPdl_pct" Target="Controls.decelPdl_pct"/>
+    <Output Name="steeringCmd_deg" Target="Controls.steeringCmd_deg"/>
+    <Property Name="ACC_SET_SPEED_MPS" Target="Planning.accSetSpeed_mps"/>
+    <Property Name="PERCEPTION_PYTHON_EXECUTABLE_PATH" Target="Perception.pythonExecutable"/>
+    <Property Name="PLANNING_PYTHON_EXECUTABLE_PATH" Target="Planning.pythonExecutable"/>
+    <Property Name="CONTROLS_PYTHON_EXECUTABLE_PATH" Target="Controls.pythonExecutable"/>
+    <RTBoardView ID="JavaStudio1.0">
+      <ComponentBox InstanceName="bypass_1_1" reversed="false">
+        <Description/>
+      </ComponentBox>
+      <ComponentBox InstanceName="bypass_1_1_1" reversed="false">
+        <Description/>
+      </ComponentBox>
+      <ConnectionShape InstanceName="Controls.egoVehXVel_mps" color="0"/>
+      <ConnectionShape InstanceName="Controls.targetVel_mps" color="0"/>
+      <ConnectionShape InstanceName="Controls.TRIGGER_ms" color="0"/>
+      <ConnectionShape InstanceName="Perception.egoVehXVel_mps" color="0"/>
+      <ConnectionShape InstanceName="Planning.leadObjectRelXPos_m" color="0"/>
+      <ConnectionShape InstanceName="Planning.leadObjectRelXVel_mps" color="0"/>
+      <ConnectionShape InstanceName="Planning.leadObjectValidity" color="0"/>
+      <ConnectionShape InstanceName="Planning.TRIGGER_ms" color="0"/>
+      <InputBox InstanceName="TRIGGER_ms" x="96" y="224" z="-1" reversed="false">
+        <Description/>
+      </InputBox>
+      <InputBox InstanceName="lidarData" x="96" y="240" z="-1" reversed="false">
+        <Description/>
+      </InputBox>
+      <InputBox InstanceName="radarData" x="96" y="256" z="-1" reversed="false">
+        <Description/>
+      </InputBox>
+      <InputBox InstanceName="egoVehXVel_mps" x="-128" y="312" z="-1" reversed="false">
+        <Description/>
+      </InputBox>
+      <InputBox InstanceName="leadVehRelXVel_mps" x="-128" y="400" z="-1" reversed="false">
+        <Description/>
+      </InputBox>
+      <InputBox InstanceName="leadVehRelXPos_m" x="-128" y="496" z="-1" reversed="false">
+        <Description/>
+      </InputBox>
+      <OutputBox InstanceName="READY_ms" x="1176" y="224" z="-1" reversed="false">
+        <Description/>
+      </OutputBox>
+      <OutputBox InstanceName="accelPdl_pct" x="1176" y="240" z="-1" reversed="false">
+        <Description/>
+      </OutputBox>
+      <OutputBox InstanceName="decelPdl_pct" x="1176" y="256" z="-1" reversed="false">
+        <Description/>
+      </OutputBox>
+      <OutputBox InstanceName="steeringCmd_deg" x="1176" y="272" z="-1" reversed="false">
+        <Description/>
+      </OutputBox>
+    </RTBoardView>
+  </MacroComponentModel>
+</MacroPackage>

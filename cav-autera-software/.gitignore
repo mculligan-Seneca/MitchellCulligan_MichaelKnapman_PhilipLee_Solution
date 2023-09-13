@@ -1,0 +1,12 @@
+**.ply
+**.png
+
+**/__pycache__
+**/autoSaved_*.rtd
+**.log
+**/build
+**/.vscode
+
+**.slxc
+**/slprj
+**.autosave
