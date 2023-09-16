@@ -33,7 +33,7 @@ class CavControls:
         # IMLPEMENT YOUR CODE HERE! 
        
         accelPdl_pct = v # accelerator pedal percentage in range [0, 1]
-        decelPdl_pct = 1-accelPdl_pct # brake pedal percentage in range [0, 1]
+        decelPdl_pct = 1-v # brake pedal percentage in range [0, 1]
         
         self.accelPdl_pct = accelPdl_pct
         self.decelPdl_pct = decelPdl_pct
