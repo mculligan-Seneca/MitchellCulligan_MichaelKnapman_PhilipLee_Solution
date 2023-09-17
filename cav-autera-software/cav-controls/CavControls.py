@@ -20,8 +20,8 @@ class CavControls:
     def executeLongitudinalControl(self):
         MIN_STEP=0.01
 
-        kp=0.5
-        ki=0.05
+        kp=1
+        ki=0.2
         kd=-0.1
 
         pe=self.targetVel_mps-self.egoVehXVel_mps
@@ -32,7 +32,7 @@ class CavControls:
         # WRITE AN ALGORITHM THAT USES THE TARGET VELOCITY TO GENERATE AN ACCEL/BRAKE PEDAL POSITION TO CONTROL THE VEHICLE
         # IMLPEMENT YOUR CODE HERE! 
        
-        accelPdl_pct = np.min(np.maximum(v,1),0) # accelerator pedal percentage in range [0, 1]
+        accelPdl_pct = np.maximum(np.minimum(v,1),0) # accelerator pedal percentage in range [0, 1]
         decelPdl_pct = 1-accelPdl_pct # brake pedal percentage in range [0, 1]
         
         self.accelPdl_pct = accelPdl_pct
