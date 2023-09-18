@@ -25,6 +25,6 @@ class CavPlanning:
         # WRITE AN ALGORITHM THAT USES THE LEAD VEHICLE DATA TO PLAN A TARGET VELOCITY FOR THE EGO VEHICLE TO FOLLOW
         # IMLPEMENT YOUR CODE HERE! 
         
-        targetVel_mps = 0 # ego vehicle target velocity (m/s)
+        targetVel_mps = 2 # ego vehicle target velocity (m/s)
         
         self.targetVel_mps = targetVel_mps
