@@ -16,7 +16,7 @@ SLOW_TO_HALF_SPEED_DRIVE_CYCLE      = CustomDriveCycle([[0, -1*CONSTANT_SPEED_MP
 SLOW_TO_STOP_DRIVE_CYCLE            = CustomDriveCycle([[0, -1*CONSTANT_SPEED_MPS], [10, -1*CONSTANT_SPEED_MPS], [20, 0]])
 SPEED_UP_FROM_STOP_DRIVE_CYCLE      = CustomDriveCycle([[0, 0], [10, -1*CONSTANT_SPEED_MPS]])
 
-LEAD_VEHICLE_DRIVE_CYCLE = SLOW_TO_HALF_SPEED_DRIVE_CYCLE
+LEAD_VEHICLE_DRIVE_CYCLE = CONSTANT_SPEED_DRIVE_CYCLE
 
 class rtmaps_python(BaseComponent):
 
@@ -58,7 +58,7 @@ class rtmaps_python(BaseComponent):
         self.carlaFramework.getActor('ego').addSensor("radar1", "radar", offset_z=2)
         #self.carlaFramework.getActor('ego').addSensor("rgbcam1", "rgbcam", offset_x=-10, offset_z=2, pitch=10)
         
-        self.carlaFramework.addActorByMapSpawnPtIdx('leadVeh', 0, xOffset=-10, yOffset=-3.75, actorType="teslaModel3", updateStrategy="velocity")
+        self.carlaFramework.addActorByMapSpawnPtIdx('leadVeh', 0, xOffset=-10, yOffset=-3.75, actorType="teslaModel3", updateStrategy="velocity") #"velocity" positionByVelocity
         self.carlaFramework.getActor('leadVeh').setDriveCycle(LEAD_VEHICLE_DRIVE_CYCLE)
         
         self.carlaFramework.initSim()
