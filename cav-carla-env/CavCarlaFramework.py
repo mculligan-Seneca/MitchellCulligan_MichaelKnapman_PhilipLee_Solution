@@ -88,11 +88,7 @@ class RadarSensor(CavSensor):
         
     def processAndGetData(self):
         #self.data = np.frombuffer(point_cloud.raw_data, dtype=np.float32).reshape(-1, 4)
-        
-        if self.data != None:
-            return np.frombuffer(self.data.raw_data, dtype=np.float32) # 1d vector with vel,azimuth,altitude,depth repeating for n points
-        else:
-            return np.array([0,0,0,0],dtype=np.float32)
+        return np.frombuffer(self.data.raw_data, dtype=np.float32) # 1d vector with vel,azimuth,altitude,depth repeating for n points
 
 class LidarSensor(CavSensor):
 
@@ -108,11 +104,8 @@ class LidarSensor(CavSensor):
         #self.data = np.frombuffer(point_cloud.raw_data, dtype=np.float32).reshape(-1, 4)
         #self.data.save_to_disk('./lidar_data/%.6d.ply' % time.time())
         #print(self.data.transform)
-        if self.data != None:
-            return np.frombuffer(self.data.raw_data, dtype=np.float32) # 1d vector with x,y,z,i repeating for n points
-        else:
-            return np.array([0,0,0,0],dtype=np.float32)
-        
+        return np.frombuffer(self.data.raw_data, dtype=np.float32) # 1d vector with x,y,z,i repeating for n points
+
 class CavActor:
     
     world = None
@@ -205,7 +198,6 @@ class CavActor:
                 
             elif self.updateStrategy == "positionByVelocity":
                 actorLoc = self.actor.get_location()
-                self.setTargetVelocity(-10, 0, 0)
                 actorLoc.x += self.targetVelocityVector.x * self.stepTime
                 actorLoc.y += self.targetVelocityVector.y * self.stepTime
                 actorLoc.z += self.targetVelocityVector.z * self.stepTime
@@ -246,10 +238,10 @@ class CavCarlaWorld:
         #set sync mode settings
         self.stepTime = syncStep
         self.worldSettings.fixed_delta_seconds = self.stepTime
+        self.updateWorldSettings()
         
         #get blueprint library
         self.bpLibrary = self.world.get_blueprint_library()
-        self.updateWorldSettings()
     
     def updateWorldSettings(self):
         self.world.apply_settings(self.worldSettings)
