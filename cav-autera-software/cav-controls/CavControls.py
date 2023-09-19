@@ -20,9 +20,9 @@ class CavControls:
     def executeLongitudinalControl(self):
         MIN_STEP=0.01
 
-        kp=1
-        ki=0.2
-        kd=-0.1
+        kp=1.15
+        ki=0.14
+        kd=-0.11
 
         pe=self.targetVel_mps-self.egoVehXVel_mps
         self.intergral_err+=MIN_STEP*pe
