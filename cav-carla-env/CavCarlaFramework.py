@@ -88,7 +88,8 @@ class RadarSensor(CavSensor):
         
     def processAndGetData(self):
         #self.data = np.frombuffer(point_cloud.raw_data, dtype=np.float32).reshape(-1, 4)
-        return np.frombuffer(self.data.raw_data, dtype=np.float32) # 1d vector with vel,azimuth,altitude,depth repeating for n points
+        if self.data != None: return np.frombuffer(self.data.raw_data, dtype=np.float32) # 1d vector with vel,azimuth,altitude,depth repeating for n points
+        else: return np.array([])
 
 class LidarSensor(CavSensor):
 
@@ -104,7 +105,8 @@ class LidarSensor(CavSensor):
         #self.data = np.frombuffer(point_cloud.raw_data, dtype=np.float32).reshape(-1, 4)
         #self.data.save_to_disk('./lidar_data/%.6d.ply' % time.time())
         #print(self.data.transform)
-        return np.frombuffer(self.data.raw_data, dtype=np.float32) # 1d vector with x,y,z,i repeating for n points
+        if self.data != None: return np.frombuffer(self.data.raw_data, dtype=np.float32) # 1d vector with x,y,z,i repeating for n points
+        else: return np.array([])
 
 class CavActor:
     

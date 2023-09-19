@@ -93,9 +93,9 @@ class rtmaps_python(BaseComponent):
         
         #send outputs to rtmaps if sensor data non-empty
         if len(egoLidarData):
-            self.writeData("lidarData", egoLidarData, bufferSize=(1000000 if simTime == 0 else len(egoLidarData)))
+            self.writeData("lidarData", egoLidarData, bufferSize=1000000)
         if len(egoRadarData):
-            self.writeData("radarData", egoRadarData, bufferSize=(1000000 if simTime == 0 else len(egoRadarData)))
+            self.writeData("radarData", egoRadarData, bufferSize=1000000)
             
         self.writeData("leadVehSpeed_ms", np.single(-1 * self.carlaFramework.getActor('leadVeh').getActorVelocity().x), 1)
         self.writeData("leadVehRelXPos_m", np.single(-1 * self.carlaFramework.getActor('leadVeh').getActorTransform().location.x + self.carlaFramework.getActor('ego').getActorTransform().location.x), 1)
