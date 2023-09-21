@@ -48,13 +48,16 @@ class rtmaps_python(BaseComponent):
         rawLidarData = None
         
         if simTime_ms > 0:
-            rawRadarData = self.inputs["radarData"].ioelt.data
-            rawLidarData = self.inputs["lidarData"].ioelt.data
+            if self.inputs["radarData"].ioelt != None:
+                rawRadarData = self.inputs["radarData"].ioelt.data
+                self.cavPerception.processAndSetRadarData(rawRadarData)
+            if self.inputs["lidarData"].ioelt != None:
+                rawLidarData = self.inputs["lidarData"].ioelt.data
+                self.cavPerception.processAndSetLidarData(rawLidarData)
+                
             egoVehXVel_mps = self.inputs["egoVehXVel_mps"].ioelt.data
         
             #set radar and lidar data in CavPerception class
-            self.cavPerception.processAndSetRadarData(rawRadarData)
-            self.cavPerception.processAndSetLidarData(rawLidarData)
             self.cavPerception.setEgoVehXVel(egoVehXVel_mps)
             
             #run perception algorithm

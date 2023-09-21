@@ -13,8 +13,12 @@ class CavPerception:
     def __init__(self):
         pass
     
-    def processAndSetRadarData(self, rawRadarData): self.radarData = np.reshape(rawRadarData, (-1, 4))
-    def processAndSetLidarData(self, rawLidarData): self.lidarData = np.reshape(rawLidarData, (-1, 3))
+    def processAndSetRadarData(self, rawRadarData): 
+        self.radarData = np.reshape(rawRadarData, (-1, 4))
+        
+    def processAndSetLidarData(self, rawLidarData): 
+        self.lidarData = np.reshape(rawLidarData, (-1, 3))
+    
     def setEgoVehXVel(self, egoVehXVel_mps): self.egoVehXVel_mps = egoVehXVel_mps
     
     def getLeadVehValidity(self): return self.leadVehValidity
