@@ -1,5 +1,5 @@
 import numpy as np
-from  scipy.cluster.vq import whiten, kmeans, book
+from  scipy.cluster.vq import kmeans
 class CavPerception:
     
     radarData = None #2d numpy array where each row represents a radar point in the form [velocity, azimuthAngle, altitude, depth]
