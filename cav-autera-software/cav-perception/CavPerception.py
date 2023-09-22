@@ -1,5 +1,5 @@
 import numpy as np
-from  scipy.cluster.vq import kmeans
+from  scipy.cluster.vq import kmeans,whiten
 class CavPerception:
     
     radarData = None #2d numpy array where each row represents a radar point in the form [velocity, azimuthAngle, altitude, depth]
@@ -30,15 +30,21 @@ class CavPerception:
     def getLeadVehRelXPos_m(self): return self.leadVehRelXPos_m
     def getLeadVehRelXVel_mps(self): return self.leadVehRelXVel_mps
     
-    #Accepts clustered data
+    #Accepts clustered data - retrieves best estimate for safety car
     def findLeadCar(self,objects):
             RADIUS =20 #radius of the cars sensors in (m)
-
+            MAX_DEG_ALLOW=15 
+            
+            #maximum degree allowance for the lead car
             #if lead car is directly infront of us and at least 20 meters away
-            for i in objects:
-                 if i[2]<RADIUS and i[1]<=95 and i[1]>=85:
-                      return i
-            return None
+            goal=np.array([0.0,1.5,20]) #angle 0 alt 1.5 m depth at least 20 m away
+             #do not consider velocity
+            norms= np.linalg.norm(objects[:,1:]-goal,axis=1)
+            #grab min euclidean distance to retrieve best fit for lead car
+            leadCar=objects[np.argmin(norms)]
+            # if leadcar is not within 15 degree interval and within the radius it is not considered in front
+            return leadCar if leadCar[1]<=MAX_DEG_ALLOW and leadCar[1]>=-MAX_DEG_ALLOW and leadCar[3]<RADIUS\
+                    else None
 
     def processAndFuseSensorData(self):
         
