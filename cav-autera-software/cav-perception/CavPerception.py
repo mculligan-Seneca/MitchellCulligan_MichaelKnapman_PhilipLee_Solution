@@ -1,5 +1,6 @@
 import numpy as np
 from  scipy.cluster.vq import kmeans,whiten
+from sklearn.cluster  import DBSCAN
 class CavPerception:
     
     radarData = None #2d numpy array where each row represents a radar point in the form [velocity, azimuthAngle, altitude, depth]
@@ -12,10 +13,24 @@ class CavPerception:
     
     def __init__(self):
         pass
+        
 
     def clusterData(self,data,k):
-        clusters, _ = kmeans(data,k)
-        return clusters
+        clusters=DBSCAN(eps=0.5, min_samples=2).fit_predict(data)
+        #Get maximum data onject collected that isnt noise
+        filteredClusters=clusters[clusters!=-1]
+        if np.size(filteredClusters)==0:
+            return None
+        
+        car_label=np.argmax(np.bincount(filteredClusters))
+   
+   
+    
+        car_data= data[np.argwhere(clusters==car_label)[0]]
+         #retrieve avg for all points
+        leadCar=[np.mean(car_data[:,k]) for k in range(car_data.shape[1])]
+    
+        return np.array(leadCar)
          #array  of objects found
     
     def processAndSetRadarData(self, rawRadarData): 
@@ -30,21 +45,7 @@ class CavPerception:
     def getLeadVehRelXPos_m(self): return self.leadVehRelXPos_m
     def getLeadVehRelXVel_mps(self): return self.leadVehRelXVel_mps
     
-    #Accepts clustered data - retrieves best estimate for safety car
-    def findLeadCar(self,objects):
-            RADIUS =20 #radius of the cars sensors in (m)
-            MAX_DEG_ALLOW=15 
-            
-            #maximum degree allowance for the lead car
-            #if lead car is directly infront of us and at least 20 meters away
-            goal=np.array([0.0,1.5,20]) #angle 0 alt 1.5 m depth at least 20 m away
-             #do not consider velocity
-            norms= np.linalg.norm(objects[:,1:]-goal,axis=1)
-            #grab min euclidean distance to retrieve best fit for lead car
-            leadCar=objects[np.argmin(norms)]
-            # if leadcar is not within 15 degree interval and within the radius it is not considered in front
-            return leadCar if leadCar[1]<=MAX_DEG_ALLOW and leadCar[1]>=-MAX_DEG_ALLOW and leadCar[3]<RADIUS\
-                    else None
+  
 
     def processAndFuseSensorData(self):
         
@@ -53,13 +54,16 @@ class CavPerception:
         # WRITE AN ALGORITHM THAT USES THE RADAR DATA (AND OPTIONALLY LIDAR DATA) TO DETERMINE THE POSITION AND VELOCITY OF THE LEAD VEHICLE (IF THERE IS ONE IN SENSOR RANGE)
         # IMLPEMENT YOUR CODE HERE! 
         #detected objects
-        objects=self.clusterData(self.radarData,k)
-        leadCar=self.findLeadCar(objects)
-        if leadCar is not None:
-            self.leadVehValidity = True# validity flag (is there a lead vehicle in range?)
-            self.leadVehRelXPos_m =  leadCar[2]# relative position of the lead vehicle wrt ego vehicle (meters)
-            self.leadVehRelXVel_mps = leadCar[0]-self.egoVehXVel_mps # relative velocity of the lead vehicle wrt ego vehicle (meters/sec)
-        else:
-            self.leadVehValidity = False # validity flag (is there a lead vehicle in range?)
-            self.leadVehRelXPos_m = 0 # relative position of the lead vehicle wrt ego vehicle (meters)
-            self.leadVehRelXVel_mps = 0 # relative velocity of the lead vehicle wrt ego vehicle (meters/sec)
+        if self.radarData is not None:
+            leadCar=self.clusterData(self.radarData)
+            
+            if leadCar is not None:
+                self.prevRadar=leadCar
+                self.leadVehValidity = True# validity flag (is there a lead vehicle in range?)
+                self.leadVehRelXPos_m =  leadCar[2]# relative position of the lead vehicle wrt ego vehicle (meters)
+                self.leadVehRelXVel_mps = leadCar[0]-self.egoVehXVel_mps # relative velocity of the lead vehicle wrt ego vehicle (meters/sec)
+            else:
+                self.leadVehValidity = False # validity flag (is there a lead vehicle in range?)
+                self.leadVehRelXPos_m = 0 # relative position of the lead vehicle wrt ego vehicle (meters)
+                self.leadVehRelXVel_mps = 0 # relative velocity of the lead vehicle wrt ego vehicle (meters/sec)
+               
