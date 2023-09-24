@@ -41,21 +41,22 @@ class CavPlanning:
           will assume that we have good weather conditions
         """
         
-        if self.leadVehValidity == 1: #THIS IS 0 TEMPORARILY FOR TESTING, CHANGE TO 1 LATER
+        if self.leadVehValidity == 0: #THIS IS 0 TEMPORARILY FOR TESTING, CHANGE TO 1 LATER
             
-            ideal_follow_distance = (1/2) * (self.leadVehRelXVel_mps) * 3
+            ideal_follow_distance = (0.75) * (self.leadVehRelXVel_mps) * 3
             
             if self.leadVehRelXPos_m > 1.3 * ideal_follow_distance: #Hot Zone
-                self.targetVel_mps = self.leadVehRelXVel_mps + (leadVehRelXPos - ideal_follow_distance) / 2
+                targetVel_mps = self.leadVehRelXVel_mps + (self.leadVehRelXPos_m - ideal_follow_distance) / 2
                 
-            elif self.leadVehRelXpos_m <= 1.3 * ideal_follow_distance: #Cold Zone
-                self.targetVel_mps = self.leadVehRelXVel_mps + (leadVehRelXPos - ideal_follow_distance) / 2.5
+            elif self.leadVehRelXPos_m <= 1.3 * ideal_follow_distance: #Cold Zone
+                targetVel_mps = self.leadVehRelXVel_mps + (self.leadVehRelXPos_m - ideal_follow_distance) / 2.5
                 
-            elif (self.leadVehRelXPos_m <= ideal_follow_distance * 1.05) and (leadVehRelXPos_m > ideal_follow_distance): #this is our just right zone
-                self.targetVel_mps = self.leadVehRelXVel_mps
+            elif (self.leadVehRelXPos_m <= ideal_follow_distance * 1.05) and (self.leadVehRelXPos_m > ideal_follow_distance): #this is our just right zone
+                targetVel_mps = self.leadVehRelXVel_mps
                 
-            elif self.leadVehRelXPos_m < ideal_follow_distance: #adjust for when the car is inside of the safe follow distance and will come to complete stop if the calculated lead vehicle distance is 0
-                self.target_Vel_mps = self.leadVehRelXVel_mps - (self.leadVehRelXPos-ideal_follow_distance)
+            #elif self.leadVehRelXPos_m < ideal_follow_distance: #adjust for when the car is inside of the safe follow distance and will come to complete stop if the calculated lead vehicle distance is 0
+            else:
+                targetVel_mps = self.leadVehRelXVel_mps - (self.leadVehRelXPos_m-ideal_follow_distance)
         else:
             targetVel_mps = 30 #This is just a hardcoded variable since I do not have access to the vehicle's current speed
         
