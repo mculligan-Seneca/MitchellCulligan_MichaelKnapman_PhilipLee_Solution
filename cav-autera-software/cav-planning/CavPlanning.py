@@ -43,7 +43,10 @@ class CavPlanning:
         
         if self.leadVehValidity == 0: #THIS IS 0 TEMPORARILY FOR TESTING, CHANGE TO 1 LATER
             
-            ideal_follow_distance = (0.75) * (self.leadVehRelXVel_mps) * 3
+
+            ideal_follow_distance = max(10,(self.leadVehRelXVel_mps) * 3)
+            
+            #ideal_follow_distance =  (self.leadVehRelXVel_mps) * 3
             
             if self.leadVehRelXPos_m > 1.3 * ideal_follow_distance: #Hot Zone
                 targetVel_mps = self.leadVehRelXVel_mps + (self.leadVehRelXPos_m - ideal_follow_distance) / 2
