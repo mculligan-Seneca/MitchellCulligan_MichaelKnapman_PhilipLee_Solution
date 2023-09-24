@@ -41,7 +41,7 @@ class CavPlanning:
           will assume that we have good weather conditions
         """
         
-        if self.leadVehValidity == 0: #THIS IS 0 TEMPORARILY FOR TESTING, CHANGE TO 1 LATER
+        if self.leadVehValidity == 1: #THIS IS 0 TEMPORARILY FOR TESTING, CHANGE TO 1 LATER
             
             ideal_follow_distance = (1/2) * (self.leadVehRelXVel_mps) * 3
             
