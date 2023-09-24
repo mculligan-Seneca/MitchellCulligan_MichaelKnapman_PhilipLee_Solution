@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MacroPackage version="4.8.0" PackageVersion="" xmlns="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles http://www.intempora.com/schemas/RTMaps/2011/RTMapsDiagram.xsd http://schemas.intempora.com/RTMaps/2011/RTMapsFiles http://www.intempora.com/schemas/RTMaps/2011/RTMapsDiagram_RTBoardView.xsd">
   <RequiredPackages>
-    <File><![CDATA[/opt/rtmaps/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]></Relative></File>
+    <File><![CDATA[C:/Program Files/Intempora/RTMaps 4/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]></Relative></File>
   </RequiredPackages>
   <RequiredMacroPackages/>
   <MacroComponentModel Model="cav_autera_software" Version="">
-    <Component InstanceName="bypass_1" Model="bypass" Version="1.5.2" x="-32" y="288" z="0">
+    <Component InstanceName="bypass_1" Model="bypass" Version="1.5.2" x="-32" y="304" z="0">
       <Input Name="input_1" LongName="bypass_1.input_1">
         <Property LongName="bypass_1.input_1.readerType" Type="1">0</Property>
         <Property LongName="bypass_1.input_1.subsampling" Type="1">1</Property>
@@ -94,14 +94,14 @@
       <Property LongName="Controls.deathBehavior" Type="4"><![CDATA[3|1|WAIT FOR PROCESS INDEFINITELY|KILL PROCESS AFTER TIMEOUT (5sec)|START ANOTHER PROCESS]]></Property>
       <Property LongName="Controls.capturePythonPrint" Type="0">true</Property>
       <Property LongName="Controls.useTCPOnly" Type="0">false</Property>
-      <ReadOnlyProperty LongName="Controls.pythonPID" Type="1">33841</ReadOnlyProperty>
+      <ReadOnlyProperty LongName="Controls.pythonPID" Type="1">7656</ReadOnlyProperty>
       <Property LongName="Controls.FileSHMSize" Type="1">15000000</Property>
       <Property LongName="Controls.useNuitka" Type="0">false</Property>
       <ReadOnlyProperty LongName="Controls.advance_end_configuration" Type="0" SubType="512">false</ReadOnlyProperty>
       <ReadOnlyProperty LongName="Controls.basic_begin_configuration" Type="3" SubType="256"><![CDATA[Basic Configuration]]></ReadOnlyProperty>
       <Property LongName="Controls.className" Type="3"><![CDATA[rtmaps_python]]></Property>
       <Property LongName="Controls.pythonExecutable" Type="3" SubType="16"><![CDATA[]]></Property>
-      <Property LongName="Controls.pythonFilename" Type="3" SubType="80"><![CDATA[/home/sam/Desktop/EcoCAR/CAVs/SoftwareDevelopment/cav-sil-environment/cav-autera-software/cav-controls/CavControlsRtmapsComp.py]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/cav-controls/CavControlsRtmapsComp.py]]></Relative></Property>
+      <Property LongName="Controls.pythonFilename" Type="3" SubType="80"><![CDATA[C:/Users/phili/Documents/ecocar/MitchellCulligan_MichaelKnapman_PhilipLee_Solution/cav-autera-software/cav-controls/CavControlsRtmapsComp.py]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/cav-controls/CavControlsRtmapsComp.py]]></Relative></Property>
       <Property LongName="Controls.readingPolicy" Type="4"><![CDATA[5|3|Synchro|Reactive|Sampling|Triggered by First Input|Periodic Resampling Based on Timestamps]]></Property>
       <Property LongName="Controls.inputsBehavior" Type="4"><![CDATA[2|0|AllowEmptyInputs|Wait4AllInputs]]></Property>
       <ReadOnlyProperty LongName="Controls.basic_end_configuration" Type="0" SubType="512">true</ReadOnlyProperty>
@@ -156,14 +156,14 @@
       <Property LongName="Perception.deathBehavior" Type="4"><![CDATA[3|1|WAIT FOR PROCESS INDEFINITELY|KILL PROCESS AFTER TIMEOUT (5sec)|START ANOTHER PROCESS]]></Property>
       <Property LongName="Perception.capturePythonPrint" Type="0">true</Property>
       <Property LongName="Perception.useTCPOnly" Type="0">false</Property>
-      <ReadOnlyProperty LongName="Perception.pythonPID" Type="1">33848</ReadOnlyProperty>
+      <ReadOnlyProperty LongName="Perception.pythonPID" Type="1">5256</ReadOnlyProperty>
       <Property LongName="Perception.FileSHMSize" Type="1">15000000</Property>
       <Property LongName="Perception.useNuitka" Type="0">false</Property>
       <ReadOnlyProperty LongName="Perception.advance_end_configuration" Type="0" SubType="512">false</ReadOnlyProperty>
       <ReadOnlyProperty LongName="Perception.basic_begin_configuration" Type="3" SubType="256"><![CDATA[Basic Configuration]]></ReadOnlyProperty>
       <Property LongName="Perception.className" Type="3"><![CDATA[rtmaps_python]]></Property>
       <Property LongName="Perception.pythonExecutable" Type="3" SubType="16"><![CDATA[]]></Property>
-      <Property LongName="Perception.pythonFilename" Type="3" SubType="80"><![CDATA[/home/sam/Desktop/EcoCAR/CAVs/SoftwareDevelopment/cav-sil-environment/cav-autera-software/cav-perception/CavPerceptionRtmapsComp.py]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/cav-perception/CavPerceptionRtmapsComp.py]]></Relative></Property>
+      <Property LongName="Perception.pythonFilename" Type="3" SubType="80"><![CDATA[C:/Users/phili/Documents/ecocar/MitchellCulligan_MichaelKnapman_PhilipLee_Solution/cav-autera-software/cav-perception/CavPerceptionRtmapsComp.py]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/cav-perception/CavPerceptionRtmapsComp.py]]></Relative></Property>
       <Property LongName="Perception.readingPolicy" Type="4"><![CDATA[5|3|Synchro|Reactive|Sampling|Triggered by First Input|Periodic Resampling Based on Timestamps]]></Property>
       <Property LongName="Perception.inputsBehavior" Type="4"><![CDATA[2|0|AllowEmptyInputs|Wait4AllInputs]]></Property>
       <ReadOnlyProperty LongName="Perception.basic_end_configuration" Type="0" SubType="512">true</ReadOnlyProperty>
@@ -208,14 +208,14 @@
       <Property LongName="Planning.deathBehavior" Type="4"><![CDATA[3|1|WAIT FOR PROCESS INDEFINITELY|KILL PROCESS AFTER TIMEOUT (5sec)|START ANOTHER PROCESS]]></Property>
       <Property LongName="Planning.capturePythonPrint" Type="0">true</Property>
       <Property LongName="Planning.useTCPOnly" Type="0">false</Property>
-      <ReadOnlyProperty LongName="Planning.pythonPID" Type="1">33855</ReadOnlyProperty>
+      <ReadOnlyProperty LongName="Planning.pythonPID" Type="1">8436</ReadOnlyProperty>
       <Property LongName="Planning.FileSHMSize" Type="1">15000000</Property>
       <Property LongName="Planning.useNuitka" Type="0">false</Property>
       <ReadOnlyProperty LongName="Planning.advance_end_configuration" Type="0" SubType="512">false</ReadOnlyProperty>
       <ReadOnlyProperty LongName="Planning.basic_begin_configuration" Type="3" SubType="256"><![CDATA[Basic Configuration]]></ReadOnlyProperty>
       <Property LongName="Planning.className" Type="3"><![CDATA[rtmaps_python]]></Property>
       <Property LongName="Planning.pythonExecutable" Type="3" SubType="16"><![CDATA[]]></Property>
-      <Property LongName="Planning.pythonFilename" Type="3" SubType="80"><![CDATA[/home/sam/Desktop/EcoCAR/CAVs/SoftwareDevelopment/cav-sil-environment/cav-autera-software/cav-planning/CavPlanningRtmapsComp.py]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/cav-planning/CavPlanningRtmapsComp.py]]></Relative></Property>
+      <Property LongName="Planning.pythonFilename" Type="3" SubType="80"><![CDATA[C:/Users/phili/Documents/ecocar/MitchellCulligan_MichaelKnapman_PhilipLee_Solution/cav-autera-software/cav-planning/CavPlanningRtmapsComp.py]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/cav-planning/CavPlanningRtmapsComp.py]]></Relative></Property>
       <Property LongName="Planning.readingPolicy" Type="4"><![CDATA[5|3|Synchro|Reactive|Sampling|Triggered by First Input|Periodic Resampling Based on Timestamps]]></Property>
       <Property LongName="Planning.inputsBehavior" Type="4"><![CDATA[2|0|AllowEmptyInputs|Wait4AllInputs]]></Property>
       <ReadOnlyProperty LongName="Planning.basic_end_configuration" Type="0" SubType="512">true</ReadOnlyProperty>
@@ -230,8 +230,8 @@
     <Connection Output="Planning.targetVel_mps" Input="Controls.targetVel_mps"/>
     <Connection Output="Planning.READY_ms" Input="Controls.TRIGGER_ms"/>
     <Connection Output="bypass_1.output_1" Input="Perception.egoVehXVel_mps"/>
-    <Connection Output="Perception.leadVehRelXPos_m" Input="Planning.leadObjectRelXPos_m"/>
-    <Connection Output="Perception.leadVehRelXVel_mps" Input="Planning.leadObjectRelXVel_mps"/>
+    <Connection Output="bypass_1_1_1.output_1" Input="Planning.leadObjectRelXPos_m"/>
+    <Connection Output="bypass_1_1.output_1" Input="Planning.leadObjectRelXVel_mps"/>
     <Connection Output="Perception.leadVehValidity" Input="Planning.leadObjectValidity"/>
     <Connection Output="Perception.READY_ms" Input="Planning.TRIGGER_ms"/>
     <Input Name="TRIGGER_ms" Target="Perception.TRIGGER_ms"/>
@@ -249,12 +249,6 @@
     <Property Name="PLANNING_PYTHON_EXECUTABLE_PATH" Target="Planning.pythonExecutable"/>
     <Property Name="CONTROLS_PYTHON_EXECUTABLE_PATH" Target="Controls.pythonExecutable"/>
     <RTBoardView ID="JavaStudio1.0">
-      <ComponentBox InstanceName="bypass_1_1" reversed="false">
-        <Description/>
-      </ComponentBox>
-      <ComponentBox InstanceName="bypass_1_1_1" reversed="false">
-        <Description/>
-      </ComponentBox>
       <ConnectionShape InstanceName="Controls.egoVehXVel_mps" color="0"/>
       <ConnectionShape InstanceName="Controls.targetVel_mps" color="0"/>
       <ConnectionShape InstanceName="Controls.TRIGGER_ms" color="0"/>

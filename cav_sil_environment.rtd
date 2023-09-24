@@ -32,9 +32,9 @@
   </ClocksManagement>
   <MacroComponent InstanceName="CavAuteraSoftware" Model="cav_autera_software" x="992" y="264" z="0">
     <PropertyOverload LongName="ACC_SET_SPEED_MPS" Type="1">20</PropertyOverload>
-    <PropertyOverload LongName="PERCEPTION_PYTHON_EXECUTABLE_PATH" Type="3" SubType="16"><![CDATA[C:\Users\phili\anaconda3\envs\carla\python.exe]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../anaconda3/envs/carla/python.exe]]></Relative></PropertyOverload>
-    <PropertyOverload LongName="PLANNING_PYTHON_EXECUTABLE_PATH" Type="3" SubType="16"><![CDATA[C:\Users\phili\anaconda3\envs\carla\python.exe]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../anaconda3/envs/carla/python.exe]]></Relative></PropertyOverload>
-    <PropertyOverload LongName="CONTROLS_PYTHON_EXECUTABLE_PATH" Type="3" SubType="16"><![CDATA[C:\Users\phili\anaconda3\envs\carla\python.exe]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../anaconda3/envs/carla/python.exe]]></Relative></PropertyOverload>
+    <PropertyOverload LongName="PERCEPTION_PYTHON_EXECUTABLE_PATH" Type="3" SubType="16"><![CDATA[C:/Users/phili/anaconda3/envs/carla/python.exe]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../anaconda3/envs/carla/python.exe]]></Relative></PropertyOverload>
+    <PropertyOverload LongName="PLANNING_PYTHON_EXECUTABLE_PATH" Type="3" SubType="16"><![CDATA[C:/Users/phili/anaconda3/envs/carla/python.exe]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../anaconda3/envs/carla/python.exe]]></Relative></PropertyOverload>
+    <PropertyOverload LongName="CONTROLS_PYTHON_EXECUTABLE_PATH" Type="3" SubType="16"><![CDATA[C:/Users/phili/anaconda3/envs/carla/python.exe]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../anaconda3/envs/carla/python.exe]]></Relative></PropertyOverload>
     <PropertyOverload LongName="autoStart" Type="0">true</PropertyOverload>
     <InputPropertyOverload LongName="TRIGGER_ms.readerType" Type="1">0</InputPropertyOverload>
     <InputPropertyOverload LongName="TRIGGER_ms.subsampling" Type="1">1</InputPropertyOverload>
@@ -111,7 +111,7 @@
     <Property LongName="CavCarlaEnvironment.deathBehavior" Type="4"><![CDATA[3|2|WAIT FOR PROCESS INDEFINITELY|KILL PROCESS AFTER TIMEOUT (5sec)|START ANOTHER PROCESS]]></Property>
     <Property LongName="CavCarlaEnvironment.capturePythonPrint" Type="0">true</Property>
     <Property LongName="CavCarlaEnvironment.useTCPOnly" Type="0">false</Property>
-    <ReadOnlyProperty LongName="CavCarlaEnvironment.pythonPID" Type="1">26152</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="CavCarlaEnvironment.pythonPID" Type="1">3000</ReadOnlyProperty>
     <Property LongName="CavCarlaEnvironment.FileSHMSize" Type="1">15000000</Property>
     <Property LongName="CavCarlaEnvironment.useNuitka" Type="0">false</Property>
     <ReadOnlyProperty LongName="CavCarlaEnvironment.advance_end_configuration" Type="0" SubType="512">false</ReadOnlyProperty>
