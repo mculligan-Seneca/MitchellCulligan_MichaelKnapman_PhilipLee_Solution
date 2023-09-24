@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <RTMapsDiagram version="4.8.0" EngineVersion="4.10" xmlns="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.intempora.com/RTMaps/2011/RTMapsFiles http://www.intempora.com/schemas/RTMaps/2011/RTMapsDiagram.xsd">
   <RequiredPackages>
-    <File Version="1.0.0"><![CDATA[/opt/rtmaps/packages/MasterScheduler/MasterScheduler_Linux64.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/MasterScheduler/MasterScheduler_Linux64.pck]]></Relative></File>
-    <File Version="4.3.6"><![CDATA[/opt/rtmaps/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]></Relative></File>
-    <File Version="1.0.0"><![CDATA[/opt/rtmaps/packages/SimulinkPlantModel/SimulinkPlantModel_Linux64.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/SimulinkPlantModel/SimulinkPlantModel_Linux64.pck]]></Relative></File>
+    <File Version="4.3.6"><![CDATA[C:/Program Files/Intempora/RTMaps 4/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]><Relative><![CDATA[%RTMAPS_INSTDIR%/packages/rtmaps_python_bridge/rtmaps_python_bridge.pck]]></Relative></File>
+    <File Version="1.0.0"><![CDATA[C:/Users/phili/Documents/ecocar/MitchellCulligan_MichaelKnapman_PhilipLee_Solution/cav-master-scheduler/bin/MasterScheduler_Win64.pck]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/cav-master-scheduler/bin/MasterScheduler_Win64.pck]]></Relative></File>
+    <File Version="1.0.0"><![CDATA[C:/Users/phili/Documents/ecocar/MitchellCulligan_MichaelKnapman_PhilipLee_Solution/cav-plant-model/bin/SimulinkPlantModel_Win64.pck]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/cav-plant-model/bin/SimulinkPlantModel_Win64.pck]]></Relative></File>
   </RequiredPackages>
   <RequiredMacroPackages>
-    <File><![CDATA[/home/sam/Desktop/EcoCAR/CAVs/SoftwareDevelopment/cav-sil-environment/cav-autera-software/cav_autera_software.rtmc]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../cav-sil-environment/cav-autera-software/cav_autera_software.rtmc]]></Relative></File>
+    <File><![CDATA[C:/Users/phili/Documents/ecocar/MitchellCulligan_MichaelKnapman_PhilipLee_Solution/cav-autera-software/cav_autera_software.rtmc]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/cav-autera-software/cav_autera_software.rtmc]]></Relative></File>
   </RequiredMacroPackages>
   <EngineProperties>
     <Property LongName="Engine.startTimespeed" Type="1">1000</Property>
@@ -32,9 +32,9 @@
   </ClocksManagement>
   <MacroComponent InstanceName="CavAuteraSoftware" Model="cav_autera_software" x="992" y="264" z="0">
     <PropertyOverload LongName="ACC_SET_SPEED_MPS" Type="1">20</PropertyOverload>
-    <PropertyOverload LongName="PERCEPTION_PYTHON_EXECUTABLE_PATH" Type="3" SubType="16"><![CDATA[/home/sam/miniconda3/envs/carla/bin/python]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../../../miniconda3/envs/carla/bin/python]]></Relative></PropertyOverload>
-    <PropertyOverload LongName="PLANNING_PYTHON_EXECUTABLE_PATH" Type="3" SubType="16"><![CDATA[/home/sam/miniconda3/envs/carla/bin/python]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../../../miniconda3/envs/carla/bin/python]]></Relative></PropertyOverload>
-    <PropertyOverload LongName="CONTROLS_PYTHON_EXECUTABLE_PATH" Type="3" SubType="16"><![CDATA[/home/sam/miniconda3/envs/carla/bin/python]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../../../miniconda3/envs/carla/bin/python]]></Relative></PropertyOverload>
+    <PropertyOverload LongName="PERCEPTION_PYTHON_EXECUTABLE_PATH" Type="3" SubType="16"><![CDATA[C:/Users/phili/anaconda3/envs/carla/python.exe]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../anaconda3/envs/carla/python.exe]]></Relative></PropertyOverload>
+    <PropertyOverload LongName="PLANNING_PYTHON_EXECUTABLE_PATH" Type="3" SubType="16"><![CDATA[C:/Users/phili/anaconda3/envs/carla/python.exe]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../anaconda3/envs/carla/python.exe]]></Relative></PropertyOverload>
+    <PropertyOverload LongName="CONTROLS_PYTHON_EXECUTABLE_PATH" Type="3" SubType="16"><![CDATA[C:/Users/phili/anaconda3/envs/carla/python.exe]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../anaconda3/envs/carla/python.exe]]></Relative></PropertyOverload>
     <PropertyOverload LongName="autoStart" Type="0">true</PropertyOverload>
     <InputPropertyOverload LongName="TRIGGER_ms.readerType" Type="1">0</InputPropertyOverload>
     <InputPropertyOverload LongName="TRIGGER_ms.subsampling" Type="1">1</InputPropertyOverload>
@@ -111,14 +111,14 @@
     <Property LongName="CavCarlaEnvironment.deathBehavior" Type="4"><![CDATA[3|2|WAIT FOR PROCESS INDEFINITELY|KILL PROCESS AFTER TIMEOUT (5sec)|START ANOTHER PROCESS]]></Property>
     <Property LongName="CavCarlaEnvironment.capturePythonPrint" Type="0">true</Property>
     <Property LongName="CavCarlaEnvironment.useTCPOnly" Type="0">false</Property>
-    <ReadOnlyProperty LongName="CavCarlaEnvironment.pythonPID" Type="1">56677</ReadOnlyProperty>
+    <ReadOnlyProperty LongName="CavCarlaEnvironment.pythonPID" Type="1">3000</ReadOnlyProperty>
     <Property LongName="CavCarlaEnvironment.FileSHMSize" Type="1">15000000</Property>
     <Property LongName="CavCarlaEnvironment.useNuitka" Type="0">false</Property>
     <ReadOnlyProperty LongName="CavCarlaEnvironment.advance_end_configuration" Type="0" SubType="512">false</ReadOnlyProperty>
     <ReadOnlyProperty LongName="CavCarlaEnvironment.basic_begin_configuration" Type="3" SubType="256"><![CDATA[Basic Configuration]]></ReadOnlyProperty>
     <Property LongName="CavCarlaEnvironment.className" Type="3"><![CDATA[rtmaps_python]]></Property>
-    <Property LongName="CavCarlaEnvironment.pythonExecutable" Type="3" SubType="16"><![CDATA[/home/sam/miniconda3/envs/carla/bin/python]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../../../miniconda3/envs/carla/bin/python]]></Relative></Property>
-    <Property LongName="CavCarlaEnvironment.pythonFilename" Type="3" SubType="80"><![CDATA[/home/sam/Desktop/EcoCAR/CAVs/SoftwareDevelopment/CavDevChallenge2023/cav-carla-env/CavCarlaRtmapsComp.py]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/cav-carla-env/CavCarlaRtmapsComp.py]]></Relative></Property>
+    <Property LongName="CavCarlaEnvironment.pythonExecutable" Type="3" SubType="16"><![CDATA[C:/Users/phili/anaconda3/envs/carla/python.exe]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/../../../anaconda3/envs/carla/python.exe]]></Relative></Property>
+    <Property LongName="CavCarlaEnvironment.pythonFilename" Type="3" SubType="80"><![CDATA[C:/Users/phili/Documents/ecocar/MitchellCulligan_MichaelKnapman_PhilipLee_Solution/cav-carla-env/CavCarlaRtmapsComp.py]]><Relative><![CDATA[%RTMAPS_DIAGRAMDIR%/cav-carla-env/CavCarlaRtmapsComp.py]]></Relative></Property>
     <Property LongName="CavCarlaEnvironment.readingPolicy" Type="4"><![CDATA[5|3|Synchro|Reactive|Sampling|Triggered by First Input|Periodic Resampling Based on Timestamps]]></Property>
     <Property LongName="CavCarlaEnvironment.inputsBehavior" Type="4"><![CDATA[2|0|AllowEmptyInputs|Wait4AllInputs]]></Property>
     <ReadOnlyProperty LongName="CavCarlaEnvironment.basic_end_configuration" Type="0" SubType="512">true</ReadOnlyProperty>
